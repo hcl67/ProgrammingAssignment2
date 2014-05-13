@@ -1,7 +1,14 @@
-## Put comments here that give an overall description of what your
-## functions do
+## these functions cache the inverse of matrix, and if possible, use the cache rather than calculate the inverse 
+## every time
 
-## Write a short comment describing this function
+## function to store the matrix and its inversion
+## Args:
+##   x: the matrix to calculate the inverse
+## Return:
+##   set: function to set the value of matrix x
+##   get: function to get the value of matrix x
+##   setinv: function to set the value of inverse matrix of x
+##   getinv: function to get the value of inverse matrix of x
 
 makeCacheMatrix <- function(x = matrix()) {
   invx <- NULL
@@ -19,7 +26,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## function to get and cache the inverse matrix and the cached value would be used if possible
+## Args:
+##   x: the matrix to calculate the inverse
+## Return:
+##   invx: inverse matrix of x
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
